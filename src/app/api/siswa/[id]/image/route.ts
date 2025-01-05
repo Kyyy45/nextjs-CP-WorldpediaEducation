@@ -1,5 +1,3 @@
-// /api/siswa/[id]/image/route.ts
-
 import { NextRequest, NextResponse } from "next/server";
 import prisma from "@/lib/db";
 import { unlink } from "fs/promises";
@@ -78,7 +76,7 @@ export async function GET(
   { params }: { params: { id: string } }
 ) {
   try {
-    const { id } = await params;
+    const { id } = params;
 
     const student = await prisma.pendaftaran.findUnique({
       where: { id },

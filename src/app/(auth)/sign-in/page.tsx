@@ -139,7 +139,7 @@ const SignInPage = () => {
         <div className="flex">
           <p className="text-sm text-muted-foreground text-center w-full">
             Belum memiliki akun?{" "}
-            <Link href="sign-up" className="text-foreground">
+            <Link href="/sign-up" className="text-foreground">
               Sign up
             </Link>
           </p>
