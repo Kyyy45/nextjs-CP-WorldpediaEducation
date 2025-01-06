@@ -135,7 +135,7 @@ export async function PUT(
   } catch (error) {
     console.error('Error:', error);
     return NextResponse.json(
-      { message: 'Gagal memperbarui data siswa' },
+      { message: (error as Error).message },
       { status: 500 }
     );
   }
