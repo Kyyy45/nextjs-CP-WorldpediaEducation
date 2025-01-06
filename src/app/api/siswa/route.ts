@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import prisma from '@/lib/db';
-import { uploadFile } from '@/lib/file-upload';
+import { uploadToCloudinary } from '@/lib/cloudinary';
 
 export async function GET() {
   try {
@@ -40,7 +40,7 @@ export async function POST(request: NextRequest) {
         );
       }
 
-      buktiPembayaranUrl = await uploadFile(file);
+      buktiPembayaranUrl = await uploadToCloudinary(file) as string;
     }
 
     const studentData = {

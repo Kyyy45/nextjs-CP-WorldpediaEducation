@@ -1,17 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 import prisma from "@/lib/db";
-import { unlink } from "fs/promises";
-import { join } from "path";
-import { uploadFile } from "@/lib/file-upload";
+import { uploadToCloudinary, deleteFromCloudinary } from "@/lib/cloudinary";
 
 export async function DELETE(
   request: NextRequest,
   { params }: { params: { id: string } }
 ) {
   try {
-    const { id } = await params;
+    const { id } = params;
 
-    // Get student data first
     const student = await prisma.pendaftaran.findUnique({
       where: { id },
     });
@@ -23,23 +20,10 @@ export async function DELETE(
       );
     }
 
-    // If there's an image, try to delete it
     if (student.buktiPembayaran) {
-      const filePath = join(
-        process.cwd(),
-        "public",
-        student.buktiPembayaran.replace(/^\//, "")
-      );
-
-      try {
-        await unlink(filePath);
-      } catch (error) {
-        console.error("Error deleting file:", error);
-        // Continue with deletion even if file removal fails
-      }
+      await deleteFromCloudinary(student.buktiPembayaran);
     }
 
-    // Delete the student record
     await prisma.pendaftaran.delete({
       where: { id },
     });
@@ -65,7 +49,7 @@ export async function PUT(
   { params }: { params: { id: string } }
 ) {
   try {
-    const { id } = await params;
+    const { id } = params;
     const formData = await request.formData();
     const file = formData.get('buktiPembayaran') as File | null;
 
@@ -86,26 +70,16 @@ export async function PUT(
         );
       }
 
-      buktiPembayaranUrl = await uploadFile(file);
-
-      // Delete old image if exists
       const existingStudent = await prisma.pendaftaran.findUnique({
         where: { id },
         select: { buktiPembayaran: true },
       });
 
       if (existingStudent?.buktiPembayaran) {
-        const oldFilePath = join(
-          process.cwd(),
-          'public',
-          existingStudent.buktiPembayaran.replace(/^\//, '')
-        );
-        try {
-          await unlink(oldFilePath);
-        } catch (error) {
-          console.error('Error deleting old file:', error);
-        }
+        await deleteFromCloudinary(existingStudent.buktiPembayaran);
       }
+
+      buktiPembayaranUrl = await uploadToCloudinary(file) as string;
     }
 
     const studentData = {

@@ -1,26 +1,18 @@
 import { NextRequest, NextResponse } from "next/server";
 import prisma from "@/lib/db";
-import { unlink } from "fs/promises";
-import { join } from "path";
+import { deleteFromCloudinary } from "@/lib/cloudinary";
 
-/**
- * API endpoint untuk menghapus gambar bukti pembayaran siswa
- * Method: DELETE
- * Route: /api/siswa/[id]/image
- */
 export async function DELETE(
   request: NextRequest,
   { params }: { params: { id: string } }
 ) {
   try {
-    const { id } = await params;
+    const { id } = params;
 
-    // Cek apakah data siswa ada
     const student = await prisma.pendaftaran.findUnique({
       where: { id },
     });
 
-    // Jika siswa atau bukti pembayaran tidak ditemukan
     if (!student || !student.buktiPembayaran) {
       return NextResponse.json(
         { message: "Gambar tidak ditemukan" },
@@ -28,23 +20,8 @@ export async function DELETE(
       );
     }
 
-    // Hapus file dari sistem
-    const filePath = join(
-      process.cwd(),
-      "public",
-      student.buktiPembayaran.replace(/^\//, "")
-    );
+    await deleteFromCloudinary(student.buktiPembayaran);
 
-    try {
-      // Mencoba menghapus file fisik
-      await unlink(filePath);
-    } catch (error) {
-      console.error("Error saat menghapus file:", error);
-      // Lanjutkan eksekusi meskipun file tidak ditemukan
-      // Karena kita masih perlu menghapus referensi di database
-    }
-
-    // Update data siswa untuk menghapus referensi gambar
     await prisma.pendaftaran.update({
       where: { id },
       data: {
@@ -52,13 +29,11 @@ export async function DELETE(
       },
     });
 
-    // Kembalikan response sukses
     return NextResponse.json({
       message: "Gambar berhasil dihapus",
       status: 200,
     });
   } catch (error) {
-    // Handle error
     console.error("Error:", error);
     return NextResponse.json(
       {
@@ -70,7 +45,6 @@ export async function DELETE(
   }
 }
 
-// Tambahkan method GET untuk mengecek status gambar (opsional)
 export async function GET(
   request: NextRequest,
   { params }: { params: { id: string } }

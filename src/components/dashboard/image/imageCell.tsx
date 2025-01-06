@@ -45,14 +45,6 @@ export function ImageCell({ student, onUpdate }: ImageCellProps) {
     return <span className="text-muted-foreground text-center">Belum ada</span>;
   }
 
-  const handleImageClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    if (student.buktiPembayaran) {
-      window.open(student.buktiPembayaran, "_blank");
-    }
-  };
-
   return (
     <div className="relative group flex items-center justify-center">
       <div className="relative w-[50px] h-[50px]">
@@ -61,7 +53,7 @@ export function ImageCell({ student, onUpdate }: ImageCellProps) {
           alt="Bukti Pembayaran"
           fill
           className="object-cover rounded cursor-pointer transition-opacity group-hover:opacity-75"
-          onClick={handleImageClick}
+          onClick={() => window.open(student.buktiPembayaran!, "_blank")}
         />
       </div>
       <button
