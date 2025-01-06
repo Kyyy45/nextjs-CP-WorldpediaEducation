@@ -1,5 +1,3 @@
-// app/api/siswa/route.ts
-
 import { NextRequest, NextResponse } from 'next/server';
 import prisma from '@/lib/db';
 import { uploadFile } from '@/lib/file-upload';

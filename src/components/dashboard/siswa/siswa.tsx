@@ -1,5 +1,3 @@
-// ini untuk /components/dashboard/siswa/siswa.tsx
-
 "use client";
 
 import { useState, useEffect } from "react";

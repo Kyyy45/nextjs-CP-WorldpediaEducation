@@ -1,5 +1,3 @@
-// components/dashboard/image/imageCell.tsx
-
 import React, { useState } from "react";
 import Image from "next/image";
 import { Trash, Loader } from "lucide-react";
