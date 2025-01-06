@@ -65,7 +65,7 @@ export async function PUT(
   { params }: { params: { id: string } }
 ) {
   try {
-    const { id } = params;
+    const { id } = await params;
     const formData = await request.formData();
     const file = formData.get('buktiPembayaran') as File | null;
 
