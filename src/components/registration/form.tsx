@@ -170,13 +170,10 @@ const RegistrationForm: React.FC = () => {
       <div className="max-w-5xl mx-auto p-6 bg-zinc-300 rounded-lg shadow">
         <h1 className="text-xl font-semibold mb-6 text-zinc-800">Data Diri</h1>
 
-        <form onSubmit={handleSubmit} className="space-y-2">
+        <form onSubmit={handleSubmit} className="space-y-4">
           {/* Nama Siswa */}
           <div className="space-y-2">
-            <Label
-              htmlFor="namaSiswa"
-              className="block text-base font-medium text-gray-700"
-            >
+            <Label htmlFor="namaSiswa" className="text-base font-medium text-gray-700">
               Nama Siswa
             </Label>
             <Input
@@ -184,18 +181,15 @@ const RegistrationForm: React.FC = () => {
               id="namaSiswa"
               value={formData.namaSiswa}
               onChange={handleChange}
-              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-yellow-500 focus:ring-yellow-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:border-yellow-500 focus:ring-yellow-500"
               required
             />
           </div>
 
           {/* Tempat Tanggal Lahir */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div className="space-y-2">
-              <Label
-                htmlFor="tempatLahir"
-                className="block text-base font-medium text-gray-700"
-              >
+          <div className="flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:gap-4">
+            <div className="w-full sm:w-1/2 space-y-2">
+              <Label htmlFor="tempatLahir" className="text-base font-medium text-gray-700">
                 Tempat Lahir
               </Label>
               <Input
@@ -203,15 +197,12 @@ const RegistrationForm: React.FC = () => {
                 id="tempatLahir"
                 value={formData.tempatLahir}
                 onChange={handleChange}
-                className="block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-yellow-500 focus:ring-yellow-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:border-yellow-500 focus:ring-yellow-500"
                 required
               />
             </div>
-            <div className="space-y-2">
-              <Label
-                htmlFor="tanggalLahir"
-                className="block text-base font-medium text-gray-700"
-              >
+            <div className="w-full sm:w-1/2 space-y-2">
+              <Label htmlFor="tanggalLahir" className="text-base font-medium text-gray-700">
                 Tanggal Lahir
               </Label>
               <Input
@@ -219,7 +210,12 @@ const RegistrationForm: React.FC = () => {
                 id="tanggalLahir"
                 value={formData.tanggalLahir}
                 onChange={handleChange}
-                className="block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-yellow-500 focus:ring-yellow-500"
+                className="w-full px-3 py-2 border border-gray-300 rounded-md focus:border-yellow-500 focus:ring-yellow-500 [&::-webkit-calendar-picker-indicator]:bg-transparent"
+                style={{
+                  WebkitAppearance: 'none',
+                  MozAppearance: 'none',
+                  appearance: 'none'
+                }}
                 required
               />
             </div>
@@ -227,10 +223,7 @@ const RegistrationForm: React.FC = () => {
 
           {/* Sekolah */}
           <div className="space-y-2">
-            <Label
-              htmlFor="sekolah"
-              className="block text-base font-medium text-gray-700"
-            >
+            <Label htmlFor="sekolah" className="text-base font-medium text-gray-700">
               Sekolah
             </Label>
             <Input
@@ -238,17 +231,14 @@ const RegistrationForm: React.FC = () => {
               id="sekolah"
               value={formData.sekolah}
               onChange={handleChange}
-              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-yellow-500 focus:ring-yellow-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:border-yellow-500 focus:ring-yellow-500"
               required
             />
           </div>
 
           {/* Kelas */}
           <div className="space-y-2">
-            <Label
-              htmlFor="kelas"
-              className="block text-base font-medium text-gray-700"
-            >
+            <Label htmlFor="kelas" className="text-base font-medium text-gray-700">
               Kelas
             </Label>
             <Input
@@ -256,53 +246,50 @@ const RegistrationForm: React.FC = () => {
               id="kelas"
               value={formData.kelas}
               onChange={handleChange}
-              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-yellow-500 focus:ring-yellow-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:border-yellow-500 focus:ring-yellow-500"
               required
             />
           </div>
 
           {/* Alamat */}
           <div className="space-y-2">
-            <Label
-              htmlFor="alamat"
-              className="block text-base font-medium text-gray-700"
-            >
+            <Label htmlFor="alamat" className="text-base font-medium text-gray-700">
               Alamat
             </Label>
-            <textarea
+            <Textarea
               id="alamat"
               value={formData.alamat}
               onChange={handleChange}
               rows={3}
-              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-yellow-500 focus:ring-yellow-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:border-yellow-500 focus:ring-yellow-500"
               required
             />
           </div>
 
           {/* Nama Orang Tua */}
           <div className="space-y-2">
-            <Label className="block text-base font-medium text-gray-700">
+            <Label className="text-base font-medium text-gray-700">
               Nama Orang Tua
             </Label>
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <Label className="block text-base text-gray-600">Ayah</Label>
+            <div className="flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:gap-4">
+              <div className="w-full sm:w-1/2">
+                <Label className="text-base text-gray-600">Ayah</Label>
                 <Input
                   type="text"
                   id="namaAyah"
                   value={formData.namaAyah}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-yellow-500 focus:ring-yellow-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:border-yellow-500 focus:ring-yellow-500"
                 />
               </div>
-              <div>
-                <Label className="block text-base text-gray-600">Ibu</Label>
+              <div className="w-full sm:w-1/2">
+                <Label className="text-base text-gray-600">Ibu</Label>
                 <Input
                   type="text"
                   id="namaIbu"
                   value={formData.namaIbu}
                   onChange={handleChange}
-                  className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-yellow-500 focus:ring-yellow-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:border-yellow-500 focus:ring-yellow-500"
                 />
               </div>
             </div>
@@ -310,10 +297,7 @@ const RegistrationForm: React.FC = () => {
 
           {/* Alamat Orang Tua */}
           <div className="space-y-2">
-            <Label
-              htmlFor="alamatOrtu"
-              className="block text-base font-medium text-gray-700"
-            >
+            <Label htmlFor="alamatOrtu" className="text-base font-medium text-gray-700">
               Alamat Orang Tua
             </Label>
             <Textarea
@@ -321,16 +305,14 @@ const RegistrationForm: React.FC = () => {
               value={formData.alamatOrtu}
               onChange={handleChange}
               rows={3}
-              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-yellow-500 focus:ring-yellow-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:border-yellow-500 focus:ring-yellow-500"
+              required
             />
           </div>
 
           {/* No. Handphone */}
           <div className="space-y-2">
-            <Label
-              htmlFor="noHp"
-              className="block text-base font-medium text-gray-700"
-            >
+            <Label htmlFor="noHp" className="text-base font-medium text-gray-700">
               No. Handphone (WhatsApp)
             </Label>
             <Input
@@ -338,17 +320,14 @@ const RegistrationForm: React.FC = () => {
               id="noHp"
               value={formData.noHp}
               onChange={handleChange}
-              className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 focus:border-yellow-500 focus:ring-yellow-500"
+              className="w-full px-3 py-2 border border-gray-300 rounded-md focus:border-yellow-500 focus:ring-yellow-500"
               required
             />
           </div>
 
           {/* Program yang dibeli */}
           <div className="space-y-2">
-            <Label
-              htmlFor="program"
-              className="block text-base font-medium text-gray-700"
-            >
+            <Label htmlFor="program" className="text-base font-medium text-gray-700">
               Program yang dibeli
             </Label>
             <Select
@@ -371,11 +350,11 @@ const RegistrationForm: React.FC = () => {
           </div>
 
           {/* Form Actions */}
-          <div className="flex justify-center space-x-4 pt-4">
+          <div className="flex justify-center pt-4">
             <Button
               type="submit"
               disabled={loading}
-              className="bg-[#FFED00] hover:bg-[#FFF05F] w-full text-primary-foreground shadow-sm"
+              className="w-full bg-[#FFED00] hover:bg-[#FFF05F] text-primary-foreground shadow-sm"
             >
               {loading ? (
                 <Loader className="animate-spin" size={18} />
