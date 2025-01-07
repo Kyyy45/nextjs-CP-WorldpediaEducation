@@ -42,7 +42,7 @@ const HeroSection = () => {
               bimbingan terpercaya & materi pembelajaran terlengkap.
             </p>
 
-            <div className="mt-6 flex flex-wrap justify-center gap-6">
+            <div className="mt-6 flex flex-col md:flex-row justify-center gap-2 md:gap-6 px-4 md:px-0">
               <Link
                 href="https://wa.me/6285787631812"
                 target="_blank"
@@ -50,7 +50,7 @@ const HeroSection = () => {
                 className={buttonVariants({
                   variant: "outline",
                   size: "lg",
-                  className: "px-6 py-3"
+                  className: "w-full md:w-auto px-6 py-3"
                 })}
               >
                 Hubungi Kami
@@ -59,7 +59,7 @@ const HeroSection = () => {
                 href="/registration"
                 className={buttonVariants({
                   variant: "default",
-                  className: "px-6 py-3"
+                  className: "w-full md:w-auto px-6 py-3"
                 })}
               >
                 Daftar Sekarang

@@ -78,7 +78,7 @@ const FasilitasSection = () => {
                     <h3 className="font-base text-zinc-200 text-base">
                       {facility.title}
                     </h3>
-                    <p className="text-sm lg:text-base text-zinc-300 py-2">
+                    <p className="text-base lg:text-xl text-zinc-300 py-2">
                       {facility.description}
                     </p>
                   </div>
