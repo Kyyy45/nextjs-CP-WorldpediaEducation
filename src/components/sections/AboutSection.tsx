@@ -23,8 +23,8 @@ const AboutSection = () => {
                 loop={Infinity}
                 cursor
                 cursorStyle="|"
-                typeSpeed={50}
-                deleteSpeed={70}
+                typeSpeed={60}
+                deleteSpeed={80}
               />
             </div>
           </div>
