@@ -15,8 +15,8 @@ const socialLinks = [
 
 const navigationLinks = [
   { name: 'About', href: '/#about' },
-  { name: 'Testimoni', href: '/#testimoni' },
-  { name: 'Produk', href: '/#program' },
+  { name: 'Testimonial', href: '/#testimoni' },
+  { name: 'Product', href: '/#program' },
   { name: 'FAQ', href: '/#faq' },
 ];
 

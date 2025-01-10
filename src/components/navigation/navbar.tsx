@@ -10,9 +10,9 @@ import { Menu, X, Info, MessageSquare, Package, HelpCircle } from 'lucide-react'
 import Wrapper from '../global/wrapper';
 
 const navLinks = [
-  { name: 'Tentang', href: '/#about', icon: <Info size={20} /> },
-  { name: 'Testimoni', href: '/#testimoni', icon: <MessageSquare size={20} /> },
-  { name: 'Produk', href: '/#program', icon: <Package size={20} /> },
+  { name: 'About', href: '/#about', icon: <Info size={20} /> },
+  { name: 'Testimonial', href: '/#testimoni', icon: <MessageSquare size={20} /> },
+  { name: 'Product', href: '/#program', icon: <Package size={20} /> },
   { name: 'FAQ', href: '/#faq', icon: <HelpCircle size={20} /> },
 ];
 
