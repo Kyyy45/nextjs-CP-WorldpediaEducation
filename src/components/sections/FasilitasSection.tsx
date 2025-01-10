@@ -46,7 +46,7 @@ const FasilitasSection = () => {
         {/* Content */}
         <div className="relative text-center max-w-4xl mx-auto flex flex-col">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-transparent bg-gradient-to-b from-zinc-200 to-zinc-400 bg-clip-text pb-6">
-            Fasilitas
+            Facility
           </h2>
           <p className="text-lg lg:text-xl font-medium text-muted-foreground mb-8 px-4 md:px-16">
             Fasilitas Unggulan Worldpedia Education untuk Meningkatkan Kualitas Pembelajaran.
