@@ -56,7 +56,7 @@ const ProgramSection = () => {
         <div className="max-w-[928px] mx-auto">
           <div className="text-center mb-6">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-transparent bg-gradient-to-b from-zinc-200 to-zinc-400 bg-clip-text pb-6">
-              Program
+              Product
             </h2>
             <p className="text-lg md:text-xl font-medium text-muted-foreground md:px-16">
               Berbagai Program Pilihan untuk Meningkatkan Potensi Anak Anda.
