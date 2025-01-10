@@ -82,7 +82,7 @@ const Navbar = () => {
                         href='/' 
                         className={buttonVariants({ size: 'sm', variant: 'ghost' })}
                       >
-                        Keluar
+                        Logout
                       </Link>
                     </SignOutButton>
                   </div>
@@ -91,7 +91,7 @@ const Navbar = () => {
                     href='/sign-in' 
                     className={buttonVariants({ size: 'sm', variant: 'ghost' })}
                   >
-                    Masuk
+                    Login
                   </Link>
                 )}
               </>
@@ -177,7 +177,7 @@ const Navbar = () => {
                             className: 'w-full border-white/20 hover:bg-white/10'
                           })}
                         >
-                          Keluar
+                          Logout
                         </Link>
                       </SignOutButton>
                     </>
@@ -190,7 +190,7 @@ const Navbar = () => {
                         className: 'w-full border-white/20 hover:bg-white/10'
                       })}
                     >
-                      Masuk
+                      Login
                     </Link>
                   )}
                 </>

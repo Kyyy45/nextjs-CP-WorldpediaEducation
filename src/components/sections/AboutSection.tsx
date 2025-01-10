@@ -31,10 +31,10 @@ const AboutSection = () => {
 
           <p className="text-base md:text-xl text-justify tracking-tight md:tracking-wide break-words hyphens-auto text-zinc-300">
             Worldpedia Education adalah kursus berbahasa untuk siswa/i mulai dari
-            tingkat taman kanak-kanak hingga remaja dan dewasa. <span className='text-yellow-300'>WE</span> melayani
-            siswa/i dengan kemampuan terbaik <span className='text-yellow-300'>WE</span> untuk tidak hanya membuat mereka
+            tingkat taman kanak-kanak hingga remaja dan dewasa. <span className='text-[#FFED00]'>WE</span> melayani
+            siswa/i dengan kemampuan terbaik <span className='text-[#FFED00]'>WE</span> untuk tidak hanya membuat mereka
             tumbuh, tetapi juga mengembangkan kemampuan mereka untuk siap
-            menyambut masa depan. <span className='text-yellow-300'>WE</span> memberikan jaminan kepada siswa/i untuk
+            menyambut masa depan. <span className='text-[#FFED00]'>WE</span> memberikan jaminan kepada siswa/i untuk
             mendapatkan pendidikan tambahan terbaik ditangan yang tepat.
           </p>
         </div>

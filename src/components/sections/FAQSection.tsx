@@ -50,7 +50,7 @@ const FAQSection = () => {
               <AccordionItem key={index} value={`faq-${index}`}>
                 <AccordionTrigger className="text-zinc-200 text-left">
                   <div>
-                    <span className="text-base text-yellow-400 block mb-1">
+                    <span className="text-base text-[#FFED00] block mb-1">
                       {item.category}
                     </span>
                     {item.question}
@@ -66,7 +66,7 @@ const FAQSection = () => {
           <div className="text-center mt-8">
             <Link
               href="/faq"
-              className="inline-flex items-center text-yellow-400 hover:text-yellow-300 transition-colors"
+              className="inline-flex items-center text-yellow-400 hover:text-[#FFF05F] transition-colors"
             >
               Lihat Selengkapnya
               <svg
