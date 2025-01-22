@@ -151,15 +151,7 @@ const SignUpPage = () => {
         </Button>
         <div className="flex">
           <p className="text-sm text-muted-foreground text-center w-full">
-            Kembali ke Sign up
-            <Button
-              size="sm"
-              variant="link"
-              type="button"
-              disabled={isVerified}
-              onClick={() => setVerified(false)}
-            >  
-            </Button>
+            <Link href="/sign-up" className="text-foreground">Kembali ke sign up</Link>
           </p>
         </div>
       </form>
