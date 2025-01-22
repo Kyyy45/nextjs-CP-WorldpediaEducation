@@ -150,7 +150,7 @@ const SignUpPage = () => {
           ) : "Lanjutkan"}
         </Button>
         <div className="flex">
-          <p className="text-sm text-muted-foreground text-center w-full">
+          <p className="text-sm text-center w-full">
             <Link href="/sign-up" className="text-foreground">Kembali ke sign up</Link>
           </p>
         </div>
