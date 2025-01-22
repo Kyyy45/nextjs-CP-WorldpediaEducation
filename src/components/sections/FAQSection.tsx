@@ -66,7 +66,7 @@ const FAQSection = () => {
           <div className="text-center mt-8">
             <Link
               href="/faq"
-              className="inline-flex items-center text-yellow-400 hover:text-[#FFF05F] transition-colors"
+              className="inline-flex items-center text-[#FFED00] hover:text-[#FFF05F] transition-colors"
             >
               Lihat Selengkapnya
               <svg
