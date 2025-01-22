@@ -173,7 +173,7 @@ const SignUpPage = () => {
       <form onSubmit={handleSubmit} className="w-full max-w-sm space-y-4 px-[20px]">
         <div className="space-y-2">
           <Label htmlFor="name">
-            Nama Lengkap
+            Nama lengkap
           </Label>
           <Input
             id="name"
@@ -202,7 +202,7 @@ const SignUpPage = () => {
         </div>
         <div className="space-y-2">
           <Label htmlFor="name">
-            Kata Sandi
+            Kata sandi
           </Label>
           <div className="relative w-full">
             <Input

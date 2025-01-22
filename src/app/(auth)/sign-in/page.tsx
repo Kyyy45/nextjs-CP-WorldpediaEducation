@@ -90,19 +90,19 @@ const SignInPage = () => {
         className="w-full max-w-sm space-y-4 px-[20px]"
       >
         <div className="space-y-2">
-          <Label htmlFor="email">Email address</Label>
+          <Label htmlFor="email">Alamat email</Label>
           <Input
             id="email"
             type="email"
             name="email"
-            placeholder="Enter your email"
+            placeholder="Masukkan alamat email anda"
             value={emailAddress}
             disabled={isLoading}
             onChange={(e) => setEmailAddress(e.target.value)}
           />
         </div>
         <div className="space-y-2">
-          <Label htmlFor="password">Password</Label>
+          <Label htmlFor="password">Kata sandi</Label>
           <div className="relative w-full">
             <Input
               id="password"
@@ -110,7 +110,7 @@ const SignInPage = () => {
               type={showPassword ? "text" : "password"}
               value={password}
               disabled={isLoading}
-              placeholder="Enter your password"
+              placeholder="Masukkan kata sandi anda"
               onChange={(e) => setPassword(e.target.value)}
             />
             <Button
