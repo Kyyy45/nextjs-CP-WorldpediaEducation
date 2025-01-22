@@ -84,7 +84,7 @@ const SignInPage = () => {
   return (
     <div className="flex flex-col items-center justify-center hc gap-y-6">
       <Navbar />
-      <h1 className="text-2xl font-bold">Sign in</h1>
+      <h1 className="text-2xl font-bold">Sign In</h1>
       <form
         onSubmit={handleSubmit}
         className="w-full max-w-sm space-y-4 px-[20px]"
