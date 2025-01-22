@@ -150,8 +150,17 @@ const SignUpPage = () => {
           ) : "Lanjutkan"}
         </Button>
         <div className="flex">
-          <p className="text-sm text-center w-full">
-            <Link href="/sign-up" className="text-foreground">Kembali ke sign up</Link>
+          <p className="text-sm text-muted-foreground text-center w-full">
+            Kembali ke
+            <Button
+              size="sm"
+              variant="link"
+              type="button"
+              disabled={isVerified}
+              onClick={() => setVerified(false)}
+            >
+              sign up
+            </Button>
           </p>
         </div>
       </form>
