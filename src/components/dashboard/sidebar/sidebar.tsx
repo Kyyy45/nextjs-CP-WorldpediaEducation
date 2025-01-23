@@ -16,7 +16,7 @@ const Sidebar = () => {
       href: "/dashboard",
     },
     { icon: <Package size={20} />, label: "Siswa", href: "/dashboard/siswa" },
-    { icon: <Users size={20} />, label: "Users", href: "/dashboard/users" },
+    { icon: <Users size={20} />, label: "Pengguna", href: "/dashboard/users" },
   ];
 
   const commonItemStyles = `
