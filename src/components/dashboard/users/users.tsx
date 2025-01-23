@@ -107,7 +107,6 @@
       }
     };
     
-        
     const toggleSortOrder = () => {
       setSortOrder(prevOrder => prevOrder === "asc" ? "desc" : "asc");
     };
@@ -135,7 +134,7 @@
 
     return (
       <div className="p-4 mt-16 lg:mt-0">
-        <h1 className="text-2xl font-bold pb-6 text-zinc-100">Daftar Users</h1>
+        <h1 className="text-2xl font-bold pb-6 text-zinc-100">Data Users</h1>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
           <div className="relative">
