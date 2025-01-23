@@ -182,6 +182,7 @@ const RegistrationForm: React.FC = () => {
               value={formData.namaSiswa}
               onChange={handleChange}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:border-yellow-500 focus:ring-yellow-500"
+              placeholder="Masukkan nama lengkap anda"
               required
             />
           </div>
@@ -198,6 +199,7 @@ const RegistrationForm: React.FC = () => {
                 value={formData.tempatLahir}
                 onChange={handleChange}
                 className="w-full px-3 py-2 border border-gray-300 rounded-md focus:border-yellow-500 focus:ring-yellow-500"
+                placeholder="Masukkan tempat lahir anda"
                 required
               />
             </div>
@@ -232,6 +234,7 @@ const RegistrationForm: React.FC = () => {
               value={formData.sekolah}
               onChange={handleChange}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:border-yellow-500 focus:ring-yellow-500"
+              placeholder="Masukkan asal sekolah anda"
               required
             />
           </div>
@@ -247,6 +250,7 @@ const RegistrationForm: React.FC = () => {
               value={formData.kelas}
               onChange={handleChange}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:border-yellow-500 focus:ring-yellow-500"
+              placeholder="Masukkan tingkat kelas anda"
               required
             />
           </div>
@@ -262,6 +266,7 @@ const RegistrationForm: React.FC = () => {
               onChange={handleChange}
               rows={3}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:border-yellow-500 focus:ring-yellow-500"
+              placeholder="Masukkan alamat anda"
               required
             />
           </div>
@@ -279,6 +284,7 @@ const RegistrationForm: React.FC = () => {
                   id="namaAyah"
                   value={formData.namaAyah}
                   onChange={handleChange}
+                  placeholder="Masukkan nama ayah anda"
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:border-yellow-500 focus:ring-yellow-500"
                 />
               </div>
@@ -289,6 +295,7 @@ const RegistrationForm: React.FC = () => {
                   id="namaIbu"
                   value={formData.namaIbu}
                   onChange={handleChange}
+                  placeholder="Masukkan nama ibu anda"
                   className="w-full px-3 py-2 border border-gray-300 rounded-md focus:border-yellow-500 focus:ring-yellow-500"
                 />
               </div>
@@ -305,6 +312,7 @@ const RegistrationForm: React.FC = () => {
               value={formData.alamatOrtu}
               onChange={handleChange}
               rows={3}
+              placeholder="Masukkan alamat orang tua anda"
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:border-yellow-500 focus:ring-yellow-500"
               required
             />
@@ -321,6 +329,7 @@ const RegistrationForm: React.FC = () => {
               value={formData.noHp}
               onChange={handleChange}
               className="w-full px-3 py-2 border border-gray-300 rounded-md focus:border-yellow-500 focus:ring-yellow-500"
+              placeholder="Masukkan nomor whatsapp anda"
               required
             />
           </div>
