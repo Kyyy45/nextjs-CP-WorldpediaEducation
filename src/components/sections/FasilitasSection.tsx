@@ -33,7 +33,7 @@ const facilities = [
 const FasilitasSection = () => {
   return (
     <Container delay={0.4}>
-      <section id="fasilitas" className="py-32 relative">
+      <section id="facility" className="py-32 relative">
         
         {/* Background Effects */}
         <div className="w-full h-screen dark:bg-black dark:bg-transparent bg-white dark:bg-grid-white/[0.03] bg-grid-black/[0.2] absolute items-center justify-center">
@@ -52,7 +52,7 @@ const FasilitasSection = () => {
             Fasilitas Unggulan Worldpedia Education untuk Meningkatkan Kualitas Pembelajaran.
           </p>
 
-          <div className="absolute md:top-[56.6%] lg:top-[57%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden md:block">
+          <div className="absolute md:top-[56.6%] lg:top-[58.5%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden md:block">
             <Image
               src="/images/logo4.svg"
               alt="logo4"

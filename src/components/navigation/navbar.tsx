@@ -6,13 +6,14 @@ import Link from 'next/link';
 import { buttonVariants } from '../ui/button';
 import { useAuth, SignOutButton, useUser } from '@clerk/nextjs';
 import { Skeleton } from '../ui/skeleton';
-import { Menu, X, Info, MessageSquare, Package, HelpCircle } from 'lucide-react';
+import { Menu, X, Info, MessageSquare, Package, HelpCircle, School } from 'lucide-react';
 import Wrapper from '../global/wrapper';
 
 const navLinks = [
   { name: 'About', href: '/#about', icon: <Info size={20} /> },
-  { name: 'Testimonial', href: '/#testimoni', icon: <MessageSquare size={20} /> },
+  { name:'Facility', href: '/#facility', icon: <School size={20} />},
   { name: 'Program', href: '/#program', icon: <Package size={20} /> },
+  { name: 'Testimonial', href: '/#testimoni', icon: <MessageSquare size={20} /> },
   { name: 'FAQ', href: '/#faq', icon: <HelpCircle size={20} /> },
 ];
 
