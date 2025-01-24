@@ -112,7 +112,7 @@ const Navbar = () => {
       </Wrapper>
 
       <div 
-        className={`fixed inset-0 bg-black     transition-transform duration-300 lg:hidden ${
+        className={`fixed inset-0 bg-black transition-transform duration-300 lg:hidden ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
         style={{ zIndex: 40 }}

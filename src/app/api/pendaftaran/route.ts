@@ -36,29 +36,29 @@ export async function POST(request: Request) {
   }
 }
 
-export async function GET() {
-  try {
-    const registrations = await prisma.pendaftaran.findMany({
-      orderBy: {
-        createdAt: 'desc'
-      }
-    })
+// export async function GET() {
+//   try {
+//     const registrations = await prisma.pendaftaran.findMany({
+//       orderBy: {
+//         createdAt: 'desc'
+//       }
+//     })
 
-    return NextResponse.json(
-      {
-        success: true,
-        data: registrations
-      },
-      { status: 200 }
-    )
-  } catch (error) {
-    console.error('Error fetching registrations:', error)
-    return NextResponse.json(
-      {
-        success: false,
-        message: 'Gagal mengambil data pendaftaran'
-      },
-      { status: 500 }
-    )
-  }
-}
+//     return NextResponse.json(
+//       {
+//         success: true,
+//         data: registrations
+//       },
+//       { status: 200 }
+//     )
+//   } catch (error) {
+//     console.error('Error fetching registrations:', error)
+//     return NextResponse.json(
+//       {
+//         success: false,
+//         message: 'Gagal mengambil data pendaftaran'
+//       },
+//       { status: 500 }
+//     )
+//   }
+// }
