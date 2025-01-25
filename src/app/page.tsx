@@ -3,7 +3,7 @@ import Wrapper from "@/components/global/wrapper";
 import Navbar from "@/components/navigation/navbar";
 import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
-import FasilitasSection from "@/components/sections/FasilitasSection";
+import FacilitySection from "@/components/sections/FacilitySection";
 import ProgramSection from "@/components/sections/ProgramSection";
 import TestimoniSection from "@/components/sections/TestimoniSection";
 import FAQSection from "@/components/sections/FAQSection";
@@ -17,7 +17,7 @@ const Home = () => {
           <Navbar />
           <HeroSection />
           <AboutSection />
-          <FasilitasSection />
+          <FacilitySection />
           <ProgramSection />
           <TestimoniSection />
           <FAQSection/>

@@ -30,7 +30,7 @@ const facilities = [
   },
 ];
 
-const FasilitasSection = () => {
+const FacilitySection = () => {
   return (
     <Container delay={0.4}>
       <section id="facility" className="py-32 relative">
@@ -92,4 +92,4 @@ const FasilitasSection = () => {
   );
 };
 
-export default FasilitasSection;
+export default FacilitySection;
