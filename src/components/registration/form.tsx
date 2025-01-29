@@ -42,7 +42,9 @@ const RegistrationSchema = z.object({
   namaIbu: z.string().optional(),
   alamatOrtu: z.string().min(5, "Alamat terlalu pendek"),
   noHp: z.string().regex(/^(08|\+62)\d{8,11}$/, "Nomor HP tidak valid"),
-  program: z.nativeEnum(EducationProgram),
+  program: z.nativeEnum(EducationProgram, {
+    errorMap: () => ({ message: "Pilihan program wajib diisi" }),
+  }),
 });
 
 // Tipe untuk data formulir
@@ -63,7 +65,7 @@ const RegistrationForm: React.FC = () => {
     namaIbu: "",
     alamatOrtu: "",
     noHp: "",
-    program: EducationProgram.BIMBEL_CLASS,
+    program: "" as EducationProgram,
   });
 
   // Handler untuk perubahan Input umum
@@ -337,14 +339,14 @@ const RegistrationForm: React.FC = () => {
           {/* Program yang dibeli */}
           <div className="space-y-2">
             <Label htmlFor="program" className="text-base font-medium text-gray-700">
-              Program yang dibeli
+              Program yang dibeli <span className="text-red-500">*</span>
             </Label>
             <Select
               value={formData.program}
               onValueChange={handleProgramChange}
             >
               <SelectTrigger className="w-full">
-                <SelectValue placeholder="Pilih Program" />
+                <SelectValue placeholder="Pilih Program Bimbel" />
               </SelectTrigger>
               <SelectContent>
                 {Object.values(EducationProgram).map((program) => (
