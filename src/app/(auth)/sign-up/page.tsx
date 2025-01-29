@@ -102,7 +102,7 @@ const SignUpPage = () => {
         }
     } catch (error: any) {
         console.error('Error:', JSON.stringify(error, null, 2));
-        toast.error("Terjadi kesalahan. Kode verifikasi tidak valid");
+        toast.error("Kode verifikasi tidak valid. Silakan coba lagi.");
     } finally {
         setIsVerified(false);
     }
