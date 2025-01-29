@@ -38,8 +38,8 @@ const RegistrationSchema = z.object({
   sekolah: z.string().min(2, "Nama sekolah tidak valid"),
   kelas: z.string().min(1, "Kelas harus diisi"),
   alamat: z.string().min(5, "Alamat terlalu pendek"),
-  namaAyah: z.string().optional(),
-  namaIbu: z.string().optional(),
+  namaAyah: z.string().min(1, "Nama ayah harus diisi"),
+  namaIbu: z.string().min(1, "Nama ibu harus diisi"),
   alamatOrtu: z.string().min(5, "Alamat terlalu pendek"),
   noHp: z.string().regex(/^(08|\+62)\d{8,11}$/, "Nomor HP tidak valid"),
   program: z.nativeEnum(EducationProgram, {

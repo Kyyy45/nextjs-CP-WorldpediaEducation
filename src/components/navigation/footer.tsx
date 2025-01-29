@@ -21,7 +21,7 @@ const navigationLinks = [
 ];
 
 const contactInfo = {
-  whatsapp: '+62 857 8763 1812',
+  whatsapp: '+62 812 3456 7890',
   email: 'Worldpedia.education@gmail.com',
   address: 'Jl. Re.Martadinata No.52, Sungai Jawi Luar, Kec. Pontianak Bar., Kota Pontianak, Kalimantan Barat 78244'
 };
