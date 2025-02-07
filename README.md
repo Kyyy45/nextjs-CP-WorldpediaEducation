@@ -2,14 +2,14 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Tech Stack
 
-Next.js: For building the React-based website.
-TailwindCSS: For styling with utility-first CSS.
-Shadcn UI: For UI components.
-Magic UI: For UI components.
-Aceternity UI: For UI components.
-Clerk: For user authentication.
-MongoDB: For database storage and management.
-Cloudinary: For media storage and optimization.
+•	Next.js: For building the React-based website.
+•	TailwindCSS: For styling with utility-first CSS.
+•	Shadcn UI: For UI components.
+•	Magic UI: For UI components.
+•	Aceternity UI: For UI components.
+•	Clerk: For user authentication.
+•	MongoDB: For database storage and management.
+•	Cloudinary: For media storage and optimization.
 
 ## Getting Started
 
