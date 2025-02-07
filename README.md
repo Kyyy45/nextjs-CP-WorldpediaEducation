@@ -25,8 +25,8 @@ Website ini dirancang untuk memudahkan calon siswa dalam mendaftar secara online
 📌 **Cara Menjalankan Proyek:**  
 1. Clone repositori ini:  
     ```sh
-    git clone https://github.com/username/repository.git
-    cd repository
+    https://github.com/Kyyy45/nextjs-CP-WorldpediaEducation.git
+    cd nextjs-CP-WorldpediaEducation
     ```
 2. Install dependensi:  
     ```sh
