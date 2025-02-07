@@ -22,8 +22,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ### 1. Clone repositori ini:
 ```sh
-git clone https://github.com/username/repository.git
-cd repository
+https://github.com/Kyyy45/nextjs-CP-WorldpediaEducation.git
+nextjs-CP-WorldpediaEducation.git
 
 First, run the development server:
 
