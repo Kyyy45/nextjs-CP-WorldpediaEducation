@@ -34,20 +34,21 @@ Website ini dirancang untuk memudahkan calon siswa dalam mendaftar secara online
     ```
 3. Atur variabel lingkungan (env):  
     ```sh
-    # app
-    NEXT_PUBLIC_URL=http://localhost:3000
-    NEXT_PUBLIC_DOMAIN=localhost:3000
-
-    # clerk
-    CLERK_SECRET_KEY=
-    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
-    NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
-    NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
-    NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/
-    NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/
-
-    # Prisma
-    DATABASE_URL="mongodb+srv://username:password@cluster.mongodb.net/db_name"
+     #database
+     DATABASE_URL=
+     
+     #clerk
+     NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+     CLERK_SECRET_KEY=
+     NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+     NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+     NEXT_PUBLIC_CLERK_SIGN_IN_FALLBACK_URL=/
+     NEXT_PUBLIC_CLERK_SIGN_UP_FALLBACK_URL=/
+    
+     #cloudinary
+     CLOUDINARY_CLOUD_NAME=  
+     CLOUDINARY_API_KEY=
+     CLOUDINARY_API_SECRET=
     ```
 4. Setup Prisma:  
     ```sh
