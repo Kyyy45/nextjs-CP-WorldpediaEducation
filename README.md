@@ -1,4 +1,4 @@
-# 📌 Capstone Project: Perancangan Web Interaktif Pendaftaran Online  
+# 📌 Capstone Project 
 ## 📖 Worldpedia Education  
 
 Project ini dibuat sebagai bagian dari Capstone Project dengan judul:  
