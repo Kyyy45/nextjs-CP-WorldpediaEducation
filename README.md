@@ -49,7 +49,7 @@ Website ini dirancang untuk memudahkan calon siswa dalam mendaftar secara online
     # Prisma
     DATABASE_URL="mongodb+srv://username:password@cluster.mongodb.net/db_name"
     ```
-4. Jalankan Prisma Migrate untuk memastikan database siap:  
+4. Setup Prisma:  
     ```sh
     npx prisma init
     npx prisma generate
