@@ -2,16 +2,28 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Tech Stack
 
-- **Next.js**: For building the React-based website.  
-- **TailwindCSS**: For styling with utility-first CSS.  
-- **Shadcn UI**: For UI components.  
-- **Magic UI**: For UI components.  
-- **Aceternity UI**: For UI components.  
-- **Clerk**: For user authentication.  
-- **MongoDB**: For database storage and management.  
-- **Cloudinary**: For media storage and optimization.  
+- **Next.js**: Untuk membangun website berbasis React.  
+- **TailwindCSS**: Untuk styling dengan CSS berbasis utility-first.  
+- **Shadcn UI**: Untuk komponen UI.  
+- **Magic UI**: Untuk komponen UI.  
+- **Aceternity UI**: Untuk komponen UI.  
+- **Clerk**: Untuk autentikasi pengguna.  
+- **MongoDB**: Untuk penyimpanan dan manajemen database.  
+- **Cloudinary**: Untuk penyimpanan dan optimasi media.  
+
 
 ## Getting Started
+
+### Pastikan Anda telah menginstal:
+
+- [**Node.js**](https://nodejs.org/)  
+- [**Git**](https://git-scm.com/)  
+- **npm** (termasuk dalam Node.js) / [**Yarn**](https://yarnpkg.com/) / [**pnpm**](https://pnpm.io/) / [**Bun**](https://bun.sh/)  
+
+### 1. Clone repositori ini:
+```sh
+git clone https://github.com/username/repository.git
+cd repository
 
 First, run the development server:
 
