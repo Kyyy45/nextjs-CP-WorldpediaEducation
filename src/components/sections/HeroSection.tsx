@@ -44,7 +44,7 @@ const HeroSection = () => {
 
             <div className="mt-6 flex flex-col md:flex-row justify-center gap-2 md:gap-6 px-4 md:px-0">
               <Link
-                href="https://wa.me/"
+                href="https://wa.me/62895421277277"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={buttonVariants({

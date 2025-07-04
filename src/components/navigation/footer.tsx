@@ -6,7 +6,7 @@ import Link from "next/link";
 import Wrapper from "../global/wrapper";
 
 const socialLinks = [
-  { name: 'Instagram', icon: '/images/instagram.svg', href: '' },
+  { name: 'Instagram', icon: '/images/instagram.svg', href: 'https://instagram.com/worldpedia.ptk' },
   { name: 'Facebook', icon: '/images/facebook.svg', href: '' },
   { name: 'Twitter', icon: '/images/x-twitter.svg', href: '' },
   { name: 'Tiktok', icon: '/images/tiktok.svg', href: '' },
@@ -21,9 +21,9 @@ const navigationLinks = [
 ];
 
 const contactInfo = {
-  whatsapp: '+62 812 3456 7890',
+  whatsapp: '+62895421277277',
   email: 'Worldpedia.education@gmail.com',
-  address: 'Jl. Re.Martadinata No.52, Sungai Jawi Luar, Kec. Pontianak Bar., Kota Pontianak, Kalimantan Barat 78244'
+  address: 'Jl. HRA. Rahman, Gang. Ponti Jaya no.03 '
 };
 
 const Footer = () => {
@@ -43,9 +43,15 @@ const Footer = () => {
                 Worldpedia<br />Education
               </span>
             </Link>
-            <p className="text-muted-foreground mt-4 text-sm">
+            <Link
+              href={`https://www.google.com/maps?q=${encodeURIComponent(contactInfo.address)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-muted-foreground mt-4 text-sm hover:text-foreground transition-all duration-300"
+            >
+              <Image src="/images/map.svg" alt="map" width={20} height={20} />
               {contactInfo.address}
-            </p>
+            </Link>
           </div>
 
           {/* Navigation Links */}

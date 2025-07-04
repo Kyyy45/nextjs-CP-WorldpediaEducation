@@ -14,6 +14,8 @@ export const HoverEffect = ({
     title: string;
     description: string;
     step: string;
+    price?: string;
+    registration?: string;
     link: string;
   }[];
   className?: string;
@@ -23,7 +25,7 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
+        "grid grid-cols-1 md:grid-cols-2",
         className
       )}
     >
@@ -54,10 +56,13 @@ export const HoverEffect = ({
           </AnimatePresence>
           <Card>
             <CardTitle>{item.title}</CardTitle>
+            <CardPrice>{item.price}</CardPrice>
+            <CardRegistration>{item.registration}</CardRegistration>
             <CardDescription>{item.description}</CardDescription>
+
             <CardStep>
               <div>
-                <span className="mt-8 text-zinc-300 tracking-wide leading-relaxed text-sm">
+                <span className="mt-8 text-zinc-300 tracking-wide leading-relaxed text-md">
                   Program ini ditujukan untuk:
                 </span><br />
                 {item.step}
@@ -104,7 +109,7 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h3 className={cn("text-zinc-100 font-bold tracking-wide mt-4 text-[18px]", className)}>
+    <h3 className={cn("text-zinc-100 font-bold tracking-wide text-xl md:text-2xl", className)}>
       {children}
     </h3>
   );
@@ -119,7 +124,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-8 text-zinc-300 tracking-wide leading-relaxed text-[16px]",
+        "mt-4 text-zinc-300 tracking-wide leading-relaxed text-sm md:text-base",
         className
       )}
     >
@@ -138,7 +143,7 @@ export const CardStep = ({
   return (
     <div
       className={cn(
-        "mt-8 text-zinc-100 tracking-wide leading-relaxed text-sm",
+        "mt-4 text-zinc-400 tracking-wide text-xs md:text-sm",
         className
       )}
     >
@@ -146,3 +151,42 @@ export const CardStep = ({
     </div>
   );
 };
+
+export const CardPrice = ({
+  className,
+  children,
+}: {
+  className?: string;
+  children: React.ReactNode;
+}) => {
+  return (
+    <div
+      className={cn(
+        "mt-2 text-yellow-400 font-semibold text-lg md:text-xl",
+        className
+      )}
+    >
+      {children}
+    </div>
+  );
+};
+
+export const CardRegistration = ({
+  className,
+  children,
+}: {
+  className?: string;
+  children: React.ReactNode;
+}) => {
+  return (
+    <div
+      className={cn(
+        "mt-2 whitespace-pre-line text-sm md:text-base text-zinc-300",
+        className
+      )}
+    >
+      {children}
+    </div>
+  );
+};
+

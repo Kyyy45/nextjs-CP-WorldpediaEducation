@@ -60,5 +60,13 @@ Website ini dirancang untuk memudahkan calon siswa dalam mendaftar secara online
     ```sh
     npm run dev
     ```
-6. Buka browser dan akses: [http://localhost:3000](http://localhost:3000)  
+6. Buka browser dan akses: [http://localhost:3000](http://localhost:3000)
+
+// Tambahan untuk perubahan setelah CP
+Update pada HeroSection.tsx yaitu menambahkan nomor WA
+
+Update pada FooterSection.tsx yaitu menambahkan nomor WA, IG, dan Update untuk alamat terbaru, serta icon map.svg
+
+Update pada ProgramSection.tsx dan card-hover-effect pada ui components yaitu menambahkan pricelist dan detail lainnya.
+
 

@@ -4,47 +4,60 @@ import Container from "../global/container";
 
 export const projects = [
   {
-    title: "English Class",
+        title: "Morning Class",
     description:
-      "Meningkatkan keterampilan komunikasi bahasa Inggris (mendengarkan, membaca, menulis, berbicara).",
-    step: "SD, SMP, SMA",
+      "Kelas bilingual persiapan siswa/i untuk masuk jenjang SD dengan materi pembelajaran yang meliputi Letterland, English, Math, Bahasa Indonesia, Science, Sosial Study, PE, Crafting, dan guru profesional di bidang nya.",
+    step: "Paud dan TK",
     link: "#",
-  },
-  {
-    title: "Mandarin Class",
-    description:
-      "Meningkatkan keterampilan komunikasi bahasa Mandarin (mendengarkan, membaca, menulis, berbicara).",
-    step: "SD, SMP, SMA",
-    link: "#",
-  },
-  {
-    title: "Bimbel Class",
-    description:
-      "Membantu siswa memahami materi pelajaran sesuai kurikulum sekolah.",
-    step: "SD",
-    link: "#",
+    price: "Rp 375.000/bulan",
+    registration: `Biaya pendaftaran Rp 3.200.000 sudah termasuk:
+- ATK 1 tahun
+- Seragam
+- Field Trip 4x
+- Buku Bahasa Indonesia
+- Worksheet`,
   },
   {
     title: "Letterland",
     description:
-      "Meningkatkan kosa kata, pembentukan kata, dan pelafalan dalam Bahasa Inggris untuk anak usia 3-8 tahun.",
-    step: "3 hingga 8 tahun",
+      "Kelas Persiapan anak belajar Bahasa Inggris dari bunyi huruf yang bertujuan untuk membantu anak belajar membaca kata dan kalimat, meningkatkan kosa kata, dan kemampuan berbicara Bahasa Inggris.",
+    step: "Umur 3 - 7 tahun",
     link: "#",
+    price: "Rp 350.000/bulan",
+    registration: "Biaya pendaftaran Rp 199.000",
   },
   {
-    title: "Morning Class",
+    title: "English",
     description:
-      "Persiapan pra sekolah dengan kurikulum formal dan materi Letterland dari UK.",
-    step: "3 hingga 6 tahun",
+      "Kelas belajar membantu siswa/i untuk mendapatkan nilai terbaik di sekolah dengan materi yang disampaikan sama dengan materi sekolah",
+    step: "SD, SMP, SMA",
     link: "#",
+    price: "Rp 300.000/bulan",
+    registration: "Biaya pendaftaran Rp 199.000",
   },
   {
     title: "English Mastery",
     description:
-      "Kelas berlevel untuk memperkuat kemampuan bahasa Inggris, meliputi tenses, part of speech, diskusi, dan lainnya.",
-    step: "SD, SMP, SMA, Umum",
+      "Kelas belajar Bahasa Inggris dari basic hingga advance yang bertujuan untuk meningkatakn kemampuan berbahasa inggris siswa/i baik secara lisan dan tulisan dan juga membantu meningkatkan kempuan mendengarkan, berbicara, membaca dan menulis dalam Bahasa Inggris",
+    step: "Umum",
     link: "#",
+    price: "TBA",
+    registration: "",
   },
+  // {
+  //   title: "Mandarin Class",
+  //   description:
+  //     "Meningkatkan keterampilan komunikasi bahasa Mandarin (mendengarkan, membaca, menulis, berbicara).",
+  //   step: "SD, SMP, SMA",
+  //   link: "#",
+  // },
+  // {
+  //   title: "Bimbel Class",
+  //   description:
+  //     "Membantu siswa memahami materi pelajaran sesuai kurikulum sekolah.",
+  //   step: "SD",
+  //   link: "#",
+  // },
 ];
 
 const ProgramSection = () => {
@@ -53,10 +66,10 @@ const ProgramSection = () => {
       <section id="program" className="py-10 md:py-32 relative">
         <div className="hidden lg:block absolute z-10 w-72 h-72 bg-[#fde047] rounded-full -left-[24%] blur-[14rem]" />
 
-        <div className="max-w-[928px] mx-auto">
+        <div className="max-w-[800px] mx-auto">
           <div className="text-center mb-6">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-semibold text-transparent bg-gradient-to-b from-zinc-200 to-zinc-400 bg-clip-text pb-6">
-              Program
+              Program &amp; Pricelist
             </h2>
             <p className="text-lg md:text-xl font-medium text-muted-foreground md:px-16">
               Berbagai Program Pilihan untuk Meningkatkan Potensi Anak Anda.
